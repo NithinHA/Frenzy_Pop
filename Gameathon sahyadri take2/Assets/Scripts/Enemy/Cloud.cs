@@ -33,7 +33,7 @@ public class Cloud : BaseEnemyScript {
             }
 			//thunder_audio.Play();
             canShoot = false;
-            // Start coroutine
+            // wait for rate_of_fire seconds before taking next shot
             StartCoroutine(WaitSeconds(rate_of_fire));
         }
 

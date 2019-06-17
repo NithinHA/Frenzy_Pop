@@ -46,10 +46,9 @@ MonoBehaviour:
   platform_length: 1
   platform_prefab: {fileID: 2314793019144143746, guid: c527f0aa4b75f674d877deb66a38f5b9,
     type: 3}
-  platform_sprite: {fileID: 21300000, guid: d990a41231fdf034f81c91de67fd5fb6, type: 3}
+  platform_sprite: {fileID: 21300000, guid: e0a07ed8ad3df2842b22c966d81a19fa, type: 3}
   waypoints:
-  - {x: -2, y: 2}
-  - {x: 2, y: 2}
-  - {x: 2, y: -2}
-  - {x: -2, y: -2}
+  - {x: 3.5, y: 25.5}
+  - {x: -1.2, y: 28.5}
+  - {x: 3.5, y: 31.5}
   speed: 5

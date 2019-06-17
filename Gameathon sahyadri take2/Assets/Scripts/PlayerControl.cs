@@ -72,6 +72,19 @@ public class PlayerControl : MonoBehaviour
         jumpAudio.Play();
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("platform"))
+        {
+            if (jump_count <= 0)
+            {
+                jump_count += collision.gameObject.GetComponent<Platform>().number_of_jumps;
+            }
+        }
+        // Instantiate(particles, transform.position, Quaternion.identity);
+        jumpAudio.Play();
+    }
+
     void changeTimeScale(float time_scale)
 	{    
         if (fast_game)                  // if speed up power is enabled, increase game time scale

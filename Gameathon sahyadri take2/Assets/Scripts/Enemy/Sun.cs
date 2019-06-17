@@ -49,7 +49,7 @@ public class Sun : BaseEnemyScript {
                 {
                     StartCoroutine(changeSunState());
                     can_shoot = false;
-                    StartCoroutine(nextClock());
+                    // StartCoroutine(nextClock());
                 }
                 break;
             case sun_state.shoot:
@@ -80,6 +80,8 @@ public class Sun : BaseEnemyScript {
     }
     IEnumerator changeSunState()
     {
+        yield return new WaitForSeconds(1);     // this is to prevent the enemy from immediately attacking player once player is in range
+        StartCoroutine(nextClock());
         current_state = sun_state.shoot;
         yield return new WaitForSeconds(laser_shoot_timer);
         for (int i = 0; i < barrel_per_division; i++)       // before going to idle state, remove all the existing lasers
